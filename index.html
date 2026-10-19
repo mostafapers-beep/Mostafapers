@@ -41,19 +41,28 @@
 </header>
 
 <main>
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2000&q=80" alt="Modern home at sunset with a reflecting pool">
-    </div>
-    <div class="hero-content">
-      <h1>Discover Exceptional Homes &amp; Investments</h1>
-      <p>Premium properties in prime locations. Find your dream home or the perfect investment with confidence.</p>
-      <div class="hero-actions">
-        <a class="btn btn-light" href="#properties">Explore Properties <span class="arrow">&rarr;</span></a>
-        <a class="btn btn-outline" href="#contact">Book a Viewing</a>
+  <section class="hero-scroll" id="home">
+    <div class="hero" id="heroStage">
+      <div class="hero-fallback">
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2000&q=80" alt="Modern home at sunset with a reflecting pool">
       </div>
+      <div class="hero-media">
+        <video id="heroVideo" muted playsinline preload="auto" disablepictureinpicture aria-hidden="true"></video>
+      </div>
+      <div class="hero-loading" id="heroLoading" role="status" aria-live="polite">
+        <span class="hero-loading-label">Preparing experience</span>
+        <span class="hero-loading-track"><i id="heroLoadingBar"></i></span>
+      </div>
+      <div class="hero-content">
+        <h1>Discover Exceptional Homes &amp; Investments</h1>
+        <p>Premium properties in prime locations. Find your dream home or the perfect investment with confidence.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#properties">Explore Properties <span class="arrow">&rarr;</span></a>
+          <a class="btn btn-outline" href="#contact">Book a Viewing</a>
+        </div>
+      </div>
+      <p class="hero-note">Scroll to explore &middot; Trusted by 2,400+ buyers &amp; investors worldwide</p>
     </div>
-    <p class="hero-note">Trusted by 2,400+ buyers &amp; investors worldwide</p>
   </section>
 
   <section class="about" id="about">
@@ -258,6 +267,7 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<script src="hero-scroll.js" defer></script>
 <script src="script.js"></script>
 </body>
 </html>
